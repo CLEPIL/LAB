@@ -1,28 +1,60 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app>
+    <div class="tittle">
+      <v-col>
+        注文内容
+      </v-col>
+    </div>
+    <div class="form">
+      <v-row>
+        <v-col>
+          1
+        </v-col>
+        <v-col>
+          2
+        </v-col>
+        <v-col>
+          3
+        </v-col>
+        <v-col>
+          4
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col>
+          1
+        </v-col>
+        <v-col>
+          <v-select :items="items">
+          </v-select>
+        </v-col>
+        <v-col>
+          3
+        </v-col>
+        <v-col>
+          4
+        </v-col>
+      </v-row>
+    </div>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  export default {
+    data () {
+      return{
+        items:['1','2'],
+      }
+    }
   }
-}
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.tittle{
+  color: #000000;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+}
+.form{
+  text-align: center;
 }
 </style>
