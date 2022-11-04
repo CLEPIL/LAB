@@ -3,7 +3,7 @@
     <div class="tittle">
       <v-col> 注文内容 </v-col>
     </div>
-    <v-form>
+    <v-form class="form">
       <v-row>
         <v-col> 野菜 </v-col>
         <v-col> 重量 </v-col>
@@ -41,7 +41,7 @@
           <v-btn @click="addForm()">フォーム追加</v-btn>
         </v-col>
         <v-col>
-          <v-btn>送信</v-btn>
+          <v-btn @click="send()">送信</v-btn>
         </v-col>
       </v-row>
     </v-form>
@@ -71,6 +71,9 @@ export default {
     addForm () {
       this.forms.push('')
     },
+    send () {
+      
+    }
   },
 };
 </script>
