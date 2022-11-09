@@ -3,10 +3,10 @@
     <div class="tittle">
       <v-col> 注文内容 </v-col>
     </div>
-    <v-form>
+    <v-form class="form">
       <v-row>
         <v-col> 野菜 </v-col>
-        <v-col> 重量 </v-col>
+        <v-col> 数量 </v-col>
         <v-col> 受取日 </v-col>
         <v-col> 見積もり </v-col>
       </v-row>
