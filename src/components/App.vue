@@ -45,6 +45,7 @@
         </v-col>
       </v-row>
     </v-form>
+    <router-view/>
   </v-app>
 </template>
 
