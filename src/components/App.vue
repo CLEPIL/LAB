@@ -1,5 +1,6 @@
 <template>
   <v-app>
+<<<<<<< HEAD
     <div class="tittle">
       <v-col> 注文内容 </v-col>
     </div>
@@ -45,12 +46,19 @@
         </v-col>
       </v-row>
     </v-form>
+=======
+    <div class="head">
+      <v-col></v-col>
+    </div>
+    <router-view/>
+>>>>>>> ee1f1f3b745c589bfed456d2703dea639fdf66f1
   </v-app>
 </template>
 
 <script>
 export default {
   data() {
+<<<<<<< HEAD
     return {
       items: ["野菜1", "野菜2", "野菜3"],
       g: ["250", "500", "750", "1000"],
@@ -74,6 +82,10 @@ export default {
     send () {
       
     }
+=======
+  },
+  methods: {
+>>>>>>> ee1f1f3b745c589bfed456d2703dea639fdf66f1
   },
 };
 </script>
@@ -83,6 +95,12 @@ export default {
   color: #000000;
   text-align: center;
 }
+<<<<<<< HEAD
+=======
+.head{
+  text-align: center;
+}
+>>>>>>> ee1f1f3b745c589bfed456d2703dea639fdf66f1
 .form {
   text-align: center;
 }
