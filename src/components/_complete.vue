@@ -1,12 +1,14 @@
 <template>
     <v-container class="form">
       <v-row>
-        <v-col></v-col>
         <v-col>注文履歴</v-col>
         <v-col cols="12">
           <v-data-table :headers="headers" :items="items">
           </v-data-table>
         </v-col>
+      </v-row>
+      <v-row>
+        <v-btn><router-link to="/form">他の注文</router-link></v-btn>
       </v-row>
     </v-container>
   </template>

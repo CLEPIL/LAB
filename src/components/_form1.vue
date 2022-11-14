@@ -5,7 +5,6 @@
           <v-col> 野菜 </v-col>
           <v-col> 数量 </v-col>
           <v-col> 受取日 </v-col>
-          <v-col> 見積もり </v-col>
         </v-row>
         <v-row>
           <v-col>
@@ -31,14 +30,13 @@
               </v-date-picker>
             </v-menu>
           </v-col>
-          <v-col> {{price}}円 </v-col>
         </v-row>
         <v-row class="button">
           <v-col>
             <v-btn @click="addForm()">フォーム追加</v-btn>
           </v-col>
           <v-col>
-            <v-btn>送信</v-btn>
+            <v-btn><router-link to="/comp">送信</router-link></v-btn>
           </v-col>
         </v-row>
       </v-form>
@@ -61,7 +59,7 @@
       formatDate(date) {
         if (!date) return null;
         const [year, month, day] = date.split("-");
-        this.text = `${year}${month}${day}`;
+        this.text = `${year}/${month}/${day}`;
         this.menu = false;
         return;
       },

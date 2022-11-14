@@ -1,7 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './components/App.vue'
+import Form from './components/_form1.vue'
 import Res from './components/_res.vue'
+import Comp from './components/_complete.vue'
 //
 // 他のコンポーネントは省略
 //
@@ -23,9 +25,16 @@ export default new Router({
         path:'/res',
         name:'res',
         component: Res
+    },
+    {
+      path:'/form',
+      name:'form',
+      component: Form
+    },
+    {
+      path:'/comp',
+      name:'comp',
+      component: Comp
     }
-    //
-    // 省略
-    //
   ]
 })

@@ -1,9 +1,8 @@
 <template>
   <v-app>
-    <div class="head">
-      <v-col></v-col>
-    </div>
-    <router-view/>
+    <header>共通ヘッダー</header>
+    <router-view></router-view>
+    <footer>共通フッター</footer>
   </v-app>
 </template>
 
@@ -13,6 +12,8 @@ export default {
   },
   methods: {
   },
+  components : {
+  }
 };
 </script>
 
