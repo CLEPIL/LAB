@@ -1,19 +1,35 @@
 <template>
   <v-app>
-    <header>共通ヘッダー</header>
-    <router-view></router-view>
-    <footer>共通フッター</footer>
+    <router-view/>
   </v-app>
 </template>
 
 <script>
 export default {
   data() {
+    return {
+      items: ["野菜1", "野菜2", "野菜3"],
+      g: ["250", "500", "750", "1000"],
+      menu: "",
+      text: "",
+      picker: "",
+    };
   },
   methods: {
+    formatDate(date) {
+      if (!date) return null;
+      const [year, month, day] = date.split("-");
+      this.text = `${year}/${month}/${day}`;
+      this.menu = false;
+      return;
+    },
+    addForm () {
+      this.forms.push('')
+    },
+    send () {
+      
+    }
   },
-  components : {
-  }
 };
 </script>
 
