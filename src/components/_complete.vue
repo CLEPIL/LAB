@@ -1,7 +1,6 @@
 <template>
     <v-container class="form">
       <v-row>
-        <v-col></v-col>
         <v-col>注文履歴</v-col>
         <v-col cols="12">
           <v-data-table :headers="headers" :items="items">
