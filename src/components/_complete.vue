@@ -7,6 +7,9 @@
           </v-data-table>
         </v-col>
       </v-row>
+      <v-row>
+        <router-link to="/form">別の注文</router-link>
+      </v-row>
     </v-container>
   </template>
 

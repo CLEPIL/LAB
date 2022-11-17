@@ -4,19 +4,24 @@
       <v-col>注文一覧</v-col>
       <v-col cols="12">
         <v-data-table :headers="headers" :items="items">
-          <template v-slot:[`item.delete`]="{ item }">
-            <v-btn small color="0" @click="deleteItem(item)"> 承認 </v-btn>
+          <template #[`item.age`]="{ item }">
+            <v-text-field v-model="item.age" />
           </template>
         </v-data-table>
       </v-col>
     </v-row>
     <v-row>
-      <router-link to="/edi">編集</router-link>
+      <v-col>
+        <router-link to="/res">取消</router-link>
+      </v-col>
+      <v-col>
+        <router-link to="/res">更新</router-link>
+      </v-col>
     </v-row>
   </v-container>
 </template>
-  
-  <script>
+
+<script>
 export default {
   data() {
     return {
@@ -31,30 +36,25 @@ export default {
         },
         { text: "数量", value: "age" },
         { text: "受取日時", value: "date" },
-        {
-          text: "削除",
-          value: "delete",
-          sortable: false,
-        },
       ],
       items: [
         {
           id: 1,
           name: "リーキ",
           age: 33,
-          date:"11/11"
+          date: "11/11",
         },
         {
           id: 2,
           name: "馬鈴薯",
           age: 42,
-          date:"11/12"
+          date: "11/12",
         },
         {
           id: 3,
           name: "とうもろこし",
           age: 10,
-          date:"11/13"
+          date: "11/13",
         },
       ],
     };
