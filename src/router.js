@@ -4,6 +4,7 @@ import Home from './components/App.vue'
 import Res from './components/_res.vue'
 import Form from './components/_form1.vue'
 import Comp from './components/_complete.vue'
+import edi from './components/_edi.vue'
 //
 // 他のコンポーネントは省略
 //
@@ -37,6 +38,11 @@ export default new Router({
       path:'/comp',
       name:'comp',
       component: Comp
+    },
+    {
+      path:'/edi',
+      name:'edi',
+      component:edi
     }
   ]
 })
