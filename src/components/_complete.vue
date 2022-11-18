@@ -1,14 +1,21 @@
 <template>
-    <v-container class="form">
+    <v-container class="comp">
+      <v-row>
+        <v-col>
+          送信完了
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col>
+          <router-link to="/form">別の注文</router-link>
+        </v-col>
+      </v-row>
       <v-row>
         <v-col>注文履歴</v-col>
         <v-col cols="12">
           <v-data-table :headers="headers" :items="items">
           </v-data-table>
         </v-col>
-      </v-row>
-      <v-row>
-        <router-link to="/form">別の注文</router-link>
       </v-row>
     </v-container>
   </template>
@@ -59,7 +66,7 @@ export default {
   color: #000000;
   text-align: center;
 }
-.form {
+.comp {
   text-align: center;
 }
 .button {
