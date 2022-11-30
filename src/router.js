@@ -5,6 +5,7 @@ import Res from './components/_res.vue'
 import Form from './components/_form1.vue'
 import Comp from './components/_complete.vue'
 import edi from './components/_edi.vue'
+import Comptest from './components/_completetest.vue'
 //
 // 他のコンポーネントは省略
 //
@@ -23,11 +24,9 @@ export default new Router({
       component: Home
     },
     {
-        path:'/res',
-        name:'res',
-        component: Res
-
-  
+      path:'/res',
+      name:'res',
+      component: Res
     },
     {
       path:'/form',
@@ -43,6 +42,11 @@ export default new Router({
       path:'/edi',
       name:'edi',
       component:edi
-    }
+    },
+    {
+      path:'/comptest',
+      name:'comptest',
+      component:Comptest
+    },
   ]
 })
