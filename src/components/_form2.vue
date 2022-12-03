@@ -1,8 +1,8 @@
 <template>
     <div>
         <v-checkbox
-      v-model="checkbox"
-      :label="`Checkbox 1: ${checkbox.toString()}`"
+        v-model="checkbox"
+        :label="`Checkbox 1: ${checkbox.toString()}`"
     ></v-checkbox>
     </div>
 </template>
