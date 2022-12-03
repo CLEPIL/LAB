@@ -57,7 +57,6 @@ export default {
         return{
             checkbox: [], 
             dialog: false,
-            items: ["野菜1", "野菜2", "野菜3"],
         };  
     },
     methods: {
