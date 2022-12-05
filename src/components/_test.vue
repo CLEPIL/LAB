@@ -1,43 +1,22 @@
 <template>
     <v-app>
         <v-form class="form">
-            <v-row justify="center" align-content="center" style="margin-top: 2vh">選択中: {{checkbox}} </v-row>
-            <v-row class="checkbox">
-                <v-col>
-                    <v-checkbox v-model="checkbox" 
-                    label="要素1" value="要素1"></v-checkbox>
+            <v-row class="isCheck">選択中: {{checkbox}} </v-row>            
+            <v-row>
+                <v-col
+                    class="checkbox"
+                    v-for="list in lists"
+                    :key="list.name"
+                    :cols="11"
+                >
+                <v-checkbox 
+                    
+                    v-model="checkbox"
+                    :label="list.name" 
+                    :value="list.name"></v-checkbox>
                 </v-col>
             </v-row>
-            <v-row class="checkbox">
-                <v-col>
-                    <v-checkbox v-model="checkbox" 
-                    label="要素2" value="要素2"></v-checkbox>
-                </v-col>
-            </v-row>
-            <v-row class="checkbox">
-                <v-col>
-                    <v-checkbox v-model="checkbox" 
-                    label="要素3" value="要素3"></v-checkbox>
-                </v-col>
-            </v-row>
-            <v-row class="checkbox">
-                <v-col>
-                    <v-checkbox v-model="checkbox" 
-                    label="要素4" value="要素4"></v-checkbox>
-                </v-col>
-            </v-row>
-            <v-row class="checkbox">
-                <v-col>
-                    <v-checkbox v-model="checkbox" 
-                    label="要素5" value="要素5"></v-checkbox>
-                </v-col>
-            </v-row>
-            <v-row class="checkbox">
-                <v-col>
-                    <v-checkbox v-model="checkbox" 
-                    label="要素6" value="要素6"></v-checkbox>
-                </v-col>
-            </v-row>
+
             <v-row class="button" justify="center" align-content="center">
                 <v-btn @click="showModal()">更新</v-btn>
                 <v-dialog v-model="dialog" title="更新完了">
@@ -55,6 +34,14 @@
 export default {
     data(){
         return{
+            lists: [
+                {selected: 0, name: "要素1"}, 
+                {selected: 0, name: "要素2"}, 
+                {selected: 0, name: "要素3"},
+                {selected: 0, name: "要素4"},
+                {selected: 0, name: "要素5"},
+                {selected: 0, name: "要素6"},
+            ],
             checkbox: [], 
             dialog: false,
         };  
@@ -69,8 +56,12 @@ export default {
 </script>
 
 <style>
+.isCheck{
+    padding-top: 2vh;
+    justify-content: center;
+}
 .checkbox{
-    padding-left: 5vw;
+    padding-left: 50px;
 }
 .update{
     height: 3vh;
